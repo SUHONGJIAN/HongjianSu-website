@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homepage</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "animate.css">
+        <link rel = "stylesheet" href = "aos.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+        <script src = "typed.js"></script>
+        <script src = "anime.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/jquery.ScrollMagic.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+        <script src = "https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src = "aos.js"></script>
+    </head>
+    <body>
+
+        <div id = "layer_welcome">
+            <p id = "animate" class = "center myFont">Hey, I'm <span id = "typed">Hongjian</span></p>
+            <!-- <input type = "button" id = "interested" class = "button btn-two myFont" value = "Interested"></input> -->
+            <div id = "interested" class = "btn btn-two button myFont">
+                <span class = "limitedAreaCenter">Interested?</span>
+            </div>
+            <script src = "typeEffects.js"></script>
+            <canvas id = "fireworks"></canvas>
+            <script src = "fireworks.js"></script>
+        </div>
+
+        <div id = "layer_profile">
+            <header>
+                <!-- <p>Hongjian</p> -->
+                <ul>
+                    <li><a href = "#page1">Home</a></li>
+                    <li><a href = "#">Experiences</a></li>
+                    <li><a href = "#">Images</a></li>
+                    <li><a href = "#">Contact</a></li>
+                </ul>
+            </header>
+            <section class = "panel" id = "homepage">
+                <div id = "particles-js"></div>
+                <script src = "app.js"></script>
+                <div class = "centerAll">
+                    <p>About me | ......</p>
+                </div>
+            </section>
+            <section class = "panel" id = "projectsPage">
+                <div class = "timeline-container" id = "timeline-1">
+                    <div class = "timeline-header" id = "timeline-header">
+                        <h2 class = "timeline-header__title">EXPERIENCES</h2>
+                        <h3 class = "timeline-header__subtitle">(为图片/subtitle预留)</h3>
+                    </div>
+                    <div class = "timeline" id = "timeline">
+                        <div class = "timeline-item" data-text = "Aug. 2019 - NOW">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/NYU.jpeg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title">New York University</h2>
+                                <p class = "timeline__content-role">M.S. in Computer Engineer</p>
+                                <p class = "timeline__content-location">New York, NY</p>
+                                <p class= "timeline__content-desc">NYU is ...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Nov. 2018 - June 2019">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/Ericsson.jpeg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title">Ericsson</h2>
+                                <p class = "timeline__content-role">Software Engineer - Full time</p>
+                                <p class = "timeline__content-location">Nanjing, China</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Oct. 2017 - Oct. 2018">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/Laboratory.jpg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title">Laboratory of Prof. Li</h2>
+                                <p class = "timeline__content-role">Research Assistant</p>
+                                <p class = "timeline__content-location">Wuxi, China</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Sept. 2017 - July. 2018">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/basketball.jpeg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title" style = "font-size: 28px;">Men's Basketball Team</h2>
+                                <p class = "timeline__content-role">Shooting Guard</p>
+                                <p class = "timeline__content-location">Jiangnan University</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Aug. 2017 - Mar. 2018">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/Jingshang.jpeg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title" style = "margin-top: -85px;">Jingshang Intelligent Technology Co., Ltd.</h2>
+                                <p class = "timeline__content-role">Software Engineer - Intern</p>
+                                <p class = "timeline__content-location">Wuxi, China</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "May 2016 - May 2017">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/innovationProgram.png" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title" style = "font-size: 18px; margin: -55px 0 20px;">College Students’ Innovation and Entrepreneurship Training Program</h2>
+                                <p class = "timeline__content-role">Program Leader</p>
+                                <p class = "timeline__content-location">Wuxi, China</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Sept. 2015 - July 2017">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/robotics.jpeg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title" style = "font-size: 26px; padding-top: 5px;">Robotics Research Club</h2>
+                                <p class = "timeline__content-role">Club Member</p>
+                                <p class = "timeline__content-location">Wuxi, China</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Sept. 2015 - Jan. 2016">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/studentCouncil.jpeg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title">Student Council</h2>
+                                <p class = "timeline__content-role">Leader - The Department of Sports</p>
+                                <p class = "timeline__content-location">Jiangnan University</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                        <div class = "timeline-item" data-text = "Sept. 2014 - July 2018">
+                            <div class = "timeline__content">
+                                <img class = "timeline__img" src = "images/Jiangnan6.jpg" alt = "Cannot display" />
+                                <h2 class = "timeline__content-title">Jiangnan University</h2>
+                                <p class = "timeline__content-role">B.S. in Internet of Things</p>
+                                <p class = "timeline__content-location">Wuxi, China</p>
+                                <p class= "timeline__content-desc">Hey, everyone. balabala...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src = "timeline.js"></script>
+                <!-- <script>
+                    AOS.init({
+                        delay: 300,
+                        duration: 1200,
+                    });
+                </script>
+                <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-anchor-placement = "bottom-bottom">Projects</div>
+                <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-offset = "50" data-aos-anchor-placement = "bottom-bottom">Project1</div>
+                <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-offset = "100" data-aos-anchor-placement = "bottom-bottom">Project2</div> -->
+            </section>
+            <script src = "scrollController.js"></script>
+            
+            <!-- <canvas id = "canvas"></canvas>
+            <script src = "tearableCloth.js"></script>
+            <script src = "clickSimulation.js"></script> -->
+        </div>
+
+    </body>
+</html>

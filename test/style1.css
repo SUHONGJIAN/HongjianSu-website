@@ -1,0 +1,61 @@
+body {
+    background-color: aquamarine; 
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 100%;
+}
+
+iframe {
+    background-color: rgba(13, 117, 158, 0.5)
+}
+
+h1 {
+    color: red; 
+}
+
+p {
+    color: blue;
+    font-family: verdana;
+}
+
+form {
+    text-align: left;
+}
+
+script {
+    text-align: left;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid coral;
+    margin: auto;
+    /* margin用于元素对齐, text-align用于文本对齐 */
+}
+
+a:hover {
+    background-color: lightgreen;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+input {
+    border-radius: 3px;
+    width: 100%
+}
+
+input[type = submit] {
+    background-color: coral;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+input[type = password]:focus {
+    background-color: lightblue;
+}
+
+img:hover {
+    opacity: 0.8;
+}

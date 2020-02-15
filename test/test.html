@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <script src = "jquery-3.4.1.js"></script>
+        <script src = "myScript.js"></script>
+        <meta charset = "utf-8" name = "author" content = "Hongjian Su">
+        <title> Test </title>
+        <!-- <base href = "https://www.google.com/" target = "_blank"> base:默认url -->
+    </head>
+    <body>
+        <h1>一级标题</h1>
+        <h2>二级标题</h2>
+        <p>段  落</p> <!--多余的空格或换行都被解析为一个空格-->
+        <hr/>
+        <!--注释使用方法-->
+        <a href = "https://www.linkedin.com/in/hongjiansu/" title = "LinkedIn个人主页" target = "_blank">LinkedIn - HongjianSu</a>
+        <a href = "#链接锚" style = "text-decoration: none;">查看指定行</a>
+        <p>
+            <b>加粗</b>
+            <strong>加重语气:加粗</strong>
+            <i>斜体</i>
+            <em>着重文件:斜体</em>
+            <small>缩小</small>
+            <sub>下标</sub>
+            <sup>上标</sup>
+            <pre>预格式化文本, 保留多个   空格和
+                换行符</pre>
+            <code>计算机代码文本</code> <br/>
+            <ins>插入文本</ins>
+            <del>被删除文本</del>
+            <address>地址信息</address>
+            <abbr title = "abbreviation">缩写</abbr> <br/>
+            <bdo dir = "rtl">定义文本方向</bdo> <br/>
+            <cite> <a id = "链接锚"> 引用 </a></cite>
+            <dfn>定义</dfn> <br/>
+            <img id = "myGIF" onclick = "changeImage(this)" src = "https://www.thisiscolossal.com/wp-content/uploads/2018/04/agif2opt.gif" alt = "Error" width="500">
+            <table>
+                <tr>
+                    <th rowspan="3">Header1:</th>
+                    <td>cell1</td>
+                </tr>
+                <tr>
+                    <td>cell2</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>unordered-list</li>
+                            <li>unordered-list</li>
+                        </ul>
+                        <ol>
+                            <li>orderd-list</li>
+                            <li>order-list</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </p>
+        <form>
+            <fieldset>
+                <legend>Sign up</legend>
+                First name: <input type = "text"> <br/>
+                Last name: <input type = "text"> <br/>
+                User(email): <input type = "email" placeholder="gmail, outlook..."> <br/>
+                Password: <input type = "password" id = "password" required = "required"> 
+                <input type = "submit" value = "Submit" onclick="judgeNone()"><br/> 
+            </fieldset>
+        </form>
+        <iframe name = "iframe1" ></iframe> <!--很多网页不支持iframe-->
+        <a href = "https://www.github.com/SUHONGJIAN/" target = "iframe1">Github - Hongjian Su</a> <br/>
+        <script>
+            function buttonFunction(){
+                document.getElementById("demo").innerHTML = "Click response!"
+            }
+        </script>
+        <noscript>Running browser cannot support javascript</noscript>
+        <p id = "demo">Script text</p>
+        <button type = "button" onclick="buttonFunction()">Click</button>
+        <div style = "text-align: right; text-decoration: underline; font-weight: bold; font-style: italic;">&copy: Hongjian Su</div>
+        <script>
+            document.write("<i>Java</i>Script <br />");
+            document.write(16+"su <br />");
+            document.write("haha\
+            hahaha <br />");
+        </script>
+        <button onclick="document.getElementById('date').innerHTML = Date()">当地时间</button>
+        <p id = "date"></p>
+        <a href="#myGIF" style="float: right;">返回到GIF</a>
+        <p>Test jQuery</p>
+    </body>
+</html>
