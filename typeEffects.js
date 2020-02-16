@@ -1,6 +1,6 @@
 let options1 = {
     strings: ["Hongjian", "a NYU stu.", "a Ericsson ex-eng."],
-    typeSpeed: 70,
+    typeSpeed: 80,
     backSpeed: 50,
     startDelay: 3200,
     backDelay: 800,
@@ -34,15 +34,15 @@ let options1 = {
                     document.getElementById('animate').innerHTML = "I love "
                     document.getElementById("animate").appendChild(node);
                     let typed2 = new Typed('#typed2', options2);
-                }, 500)
-            }, 1000)
+                }, 400)
+            }, 800)
         }, 1200)
     },
 }
 
 let options2 = {
     strings: ["basketball", "coding", "learning all new things!"],
-    typeSpeed: 70,
+    typeSpeed: 80,
     backSpeed: 50,
     startDelay: 1300,
     backDelay: 800,
