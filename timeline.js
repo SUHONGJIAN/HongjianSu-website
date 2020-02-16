@@ -17,7 +17,7 @@
             ")"
         );
         var itemLength = selectors.item.length;
-        $("#projectsPage").scroll(function() {
+        $("#experiencesPage").scroll(function() {
             var max, min;
             var pos = $(this).scrollTop();
             selectors.item.each(function(i) {
