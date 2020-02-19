@@ -35,11 +35,6 @@ html, body {
   overflow: hidden;
 }
 
-span {
-  display: inline-block;
-  /* color: #4baf50; */
-}
-
 #homepage {
   background-image: url(images/background2.jpeg);
   background-size: cover;
@@ -51,10 +46,19 @@ span {
   /* overscroll-behavior: contain; */
 }
 
+#skillsPage {
+  overflow: hidden;
+}
+
 /* #achievementsPage { */
   /* background-color: #031625; */
   /* display: none; */
 /* } */
+
+span {
+  display: inline-block;
+  /* color: #4baf50; */
+}
 
 #canvas {
   position: absolute;
@@ -197,7 +201,7 @@ span {
 header {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 65px;
   z-index: 1;
 }
 
@@ -590,4 +594,15 @@ header p {
   transition: filter 0.5s ease, -webkit-filter 0.5s ease;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+#skills-container {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* padding: 80px 0; */
+  font-size: 16px;
+  /* line-height: 1.75; */
 }

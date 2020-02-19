@@ -66,6 +66,20 @@ $(function () {
         }
     });
 
+
+    var wipeAnimation3 = new TimelineMax()
+    .fromTo("section.panel#skillsPage", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
+    new ScrollMagic.Scene({
+        triggerElement: "#layer_profile",
+        triggerHook: "onLeave",
+        offset: window.innerHeight * 2,
+        duration: "100%"
+    })
+    .setPin("#layer_profile")
+    .setTween(wipeAnimation3)
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
     
     
 });
