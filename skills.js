@@ -9,6 +9,7 @@ var vYear = $('#year');
 var vAvg = $('#avg');
 var vGames = $('#games');
 var vGoal = $('#goals');
+var projects = $('.list a');
 
 $(document).on('ready', function() {
   entrance();
@@ -34,6 +35,8 @@ function showOverlay() {
     .removeClass('active');
     header.removeClass('active');
     nums.css('opacity', '0');
+    $( '.list' ).makisu( 'open' );
+    $(' .stats__overlay').css('z-index', '1');
     isOpen = true;
     
    updateInfo($(this).parent().index());
@@ -42,72 +45,72 @@ function showOverlay() {
     bar.addClass('active').removeAttr('style');
     header.addClass('active');
     nums.css('opacity', '1');
+    $( '.list' ).makisu( 'close' );
+    $(' .stats__overlay').css('z-index', '0');
     isOpen = false;
   }
 }
 
 var data = [
   {
-    year: '2007-2008',
-    goals: '65',
-    games: '82',
-    avg: '0.79'
-    
+    total: 8,
+    text: ['Self Introduction App','Dodge MiniGame','Fortification Simulation [Concurrency]','Smart Dictionary Implementation','Stop Villain Simulation','Chef Simulation','RSA Encryp/Decryp', 'DES Encryp/Decryp'],
+    href: ['https://github.com/SUHONGJIAN/JAVA-Application-Self-introduction-SU','https://github.com/SUHONGJIAN/Dodge-MiniGame','https://github.com/SUHONGJIAN/Concurrency-BlockingQueue-ExecutorService','https://github.com/SUHONGJIAN/Trie-Structure-Implementation','https://github.com/SUHONGJIAN/Stop-the-Evil-Villain-Simulation','https://github.com/SUHONGJIAN/Five-star-Restaurant-Chef-Simulation','https://github.com/SUHONGJIAN/Information_Security-RSA-Encryption_decryption-JAVA','https://github.com/SUHONGJIAN/Information_Security-DES-Encryption_decryption-JAVA'], 
   },
   {
-    year: '2008-2009',
-    goals: '56',
-    games: '79',
-    avg: '0.7'
-    
+    total: 1,
+    text: ['Enterprise-level App [Django]'],
+    href: ['https://github.com/SUHONGJIAN/-Engineering-project-WeiFan-company-backdend-Django-']
   },
   {
-    year: '2009-2010',
-    goals: '50',
-    games: '72',
-    avg: '0.69'
-    
+    total: 1,
+    text: ['This Website!'],
+    href: ['#']
   },
   {
-    year: '2010-2011',
-    goals: '32',
-    games: '79',
-    avg: '0.40'
-    
+    total: 1,
+    text: ['This Website!'],
+    href: ['#']
   },
   {
-    year: '2011-2012',
-    goals: '38',
-    games: '78',
-    avg: '0.48'
-    
+    total: 1,
+    text: ['Real-time Display Web'],
+    href: ['https://github.com/SUHONGJIAN/Azure-webapp']
   },
   {
-    year: '2012-2013',
-    goals: '32',
-    games: '48',
-    avg: '0.66'
-    
+    total: 8,
+    text: ['Clear Blurred Images', 'Spam Email Filtering [SVM]', 'Face Recognization [PCA]','Recognization of Moving Objects','Skin Color Detection','Positioning Algorithms','Distrubuted Simulation','RFID-related Simulation'],
+    href: ['https://github.com/SUHONGJIAN/Matlab-make-blurred-images-clear','https://github.com/SUHONGJIAN/Matlab-Support_Vector_Machine-Spam_filtering','https://github.com/SUHONGJIAN/Matlab-Visual-Processing-Advanced-Face-perception','https://github.com/SUHONGJIAN/Matlab-Visual-Processing-Moving-target-segmentation','https://github.com/SUHONGJIAN/Matlab-Visual-Processing-Skin_color-detection','https://github.com/SUHONGJIAN/Matlab-5_different_positioning_algorithms','https://github.com/SUHONGJIAN/Matlab-Distributed_sensoorithm_judege_LEACH-clustering-energy-exhaustion','https://github.com/SUHONGJIAN/Matlab-RFID_related_experiments']
   },
   {
-    year: '2013-2014',
-    goals: '51',
-    games: '78',
-    avg: '0.65'
-    
+    total: 1,
+    text: ['Enterprise-level App [MySQL]'],
+    href: ['https://github.com/SUHONGJIAN/-Engineering-project-WeiFan-company-backdend-Django-']
   },
   {
-    year: '2014-2015',
-    goals: '50',
-    games: '76',
-    avg: '0.66'
-    
+    total: 3,
+    text: ['Branch Prediction Simulator','Single-cycle MIPS Simulation', 'Pipeline MIPS Simulation'],
+    href: ['https://github.com/SUHONGJIAN/Branch_Prediction_Simulation', 'https://github.com/SUHONGJIAN/Single_Cycle_MIPS_Simulation','https://github.com/SUHONGJIAN/Pipeline_MIPS_Simulation']
   }
 ];
 
 function updateInfo(index) {
-  vYear.text(data[index].year);
-  vAvg.text(data[index].avg);
-  vGoal.text(data[index].goals);
-  vGames.text(data[index].games);
+
+  var total = data[index].total;
+
+  for (i = 0; i < total; i++) {
+    projects.eq(i).css("visibility", "visible");
+    projects.eq(i).text(data[index].text[i]);
+    projects.eq(i).attr("href", data[index].href[i]);
+    projects.eq(i).css("border-radius", "0 0 0 0");
+  }
+
+  projects.eq(total-1).css("border-radius", "0 0 40px 40px");
+
+  for (i = total; i < 8; i++) {
+    projects.eq(i).css("visibility", "hidden");
+    projects.eq(i).text('');
+    projects.eq(i).attr("href", '');
+  }
+
 }

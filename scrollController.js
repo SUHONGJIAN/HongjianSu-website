@@ -81,5 +81,17 @@ $(function () {
     .addTo(controller);
 
     
+    var wipeAnimation4 = new TimelineMax()
+    .fromTo("section.panel#liferecordsPage", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
+    new ScrollMagic.Scene({
+        triggerElement: "#layer_profile",
+        triggerHook: "onLeave",
+        offset: window.innerHeight * 3,
+        duration: "100%"
+    })
+    .setPin("#layer_profile")
+    .setTween(wipeAnimation4)
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
     
 });

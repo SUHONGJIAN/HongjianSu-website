@@ -15,17 +15,34 @@
     font-family: 'Lato';
     -webkit-font-smoothing: antialiased;
     color: white;
-    background: tomato;
+    /* background: tomato; */
+    background-image: url("images/skills.jpeg");
+    background-size: cover;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: customfont;
   }
   
  .stats ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    z-index: 2;
+    z-index: 1;
+  }
+  
+  .stats ul li p:first-child {
+    color: tomato;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  .stats ul li p:last-child {
+    color: tomato;
+    font-family: customfont;
+    font-weight: bolder;
+    font-size: larger;
+    font-style: italic;
   }
   
   .stats {
@@ -112,12 +129,12 @@
             transition-delay: 0.4s;
   }
   .stats__item:nth-of-type(5) .stats__item-bar {
-    height: 150px;
+    height: 180px;
     -webkit-transition-delay: 0.5s;
             transition-delay: 0.5s;
   }
   .stats__item:nth-of-type(6) .stats__item-bar {
-    height: 210px;
+    height: 180px;
     -webkit-transition-delay: 0.6s;
             transition-delay: 0.6s;
   }
@@ -127,7 +144,7 @@
             transition-delay: 0.7s;
   }
   .stats__item:nth-of-type(8) .stats__item-bar {
-    height: 270px;
+    height: 210px;
     -webkit-transition-delay: 0.8s;
             transition-delay: 0.8s;
   }
@@ -206,7 +223,8 @@
     -webkit-box-ordinal-group: 1;
             order: 0;
     width: 40px;
-    background: white;
+    /* background: white; */
+    background: tomato;
     -webkit-transform: scaleY(0) translate3d(0, 0, 0);
             transform: scaleY(0) translate3d(0, 0, 0);
     cursor: pointer;
@@ -228,7 +246,7 @@
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   }
   .stats__overlay {
-    z-index: 1;
+    z-index: 0;
     position: fixed;
     top: 0;
     left: 0;
