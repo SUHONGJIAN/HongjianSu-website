@@ -13,7 +13,7 @@ function init() {
   root.camera.position.set(0, 0, 60);
 
   var width = 185;
-  var height = 101;
+  var height = 128;
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
@@ -31,7 +31,26 @@ function init() {
   })
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
+  var i = 2;
+  var toggle = true;
+  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true, onRepeat: function() {
+    i++;
+    if (i > 23) {
+      i = 1;
+    }
+    var picture = 'images/photos/'+i+'.jpg';
+    if (toggle) {
+      l1.load(picture, function(img) {
+        slide.setImage(img);
+        toggle = false;
+      });
+    } else {
+      l2.load(picture, function(img) {
+        slide2.setImage(img);
+        toggle = true;
+      });
+    }
+  }});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);

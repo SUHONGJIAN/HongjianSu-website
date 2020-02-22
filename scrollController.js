@@ -93,5 +93,18 @@ $(function () {
     .setTween(wipeAnimation4)
     .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
+
+    var wipeAnimation5 = new TimelineMax()
+    .fromTo("section.panel#contactPage", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
+    new ScrollMagic.Scene({
+        triggerElement: "#layer_profile",
+        triggerHook: "onLeave",
+        offset: window.innerHeight * 4,
+        duration: "100%"
+    })
+    .setPin("#layer_profile")
+    .setTween(wipeAnimation5)
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
     
 });
