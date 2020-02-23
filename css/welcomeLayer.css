@@ -1,0 +1,119 @@
+#layer_welcome {
+    background: #ffc302;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.myFont {
+    font-family: customFont;
+    font-size: 100px;
+    font-weight: 900;
+    visibility: hidden;
+}
+
+#typed {
+    color: #ff0040;
+}
+
+.center {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2000px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -1000px;
+}
+
+.limitedAreaCenter {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -400px;
+}
+
+/* 如何将hover的范围变小，这里并没有实现将hover的范围缩小 */
+.limitedAreaCenter:hover {
+    cursor: pointer;
+}
+
+.button {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 520px;
+    margin-top: -260px;
+    margin-left: -500px;
+    visibility: hidden;
+    color: white;
+    transition: all 1s;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.btn::before, .btn::after {
+    content: '';
+    position: absolute;
+    transition: all 1s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: 1; */
+}
+
+/* BTN TWO */
+.btn-two::before, .btn-two::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    /* z-index: 1; */
+    transition: all 1s;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 60px;
+}
+
+.btn-two:hover::after {
+    animation-name: rotatecw;
+    animation-duration: 5s;
+}
+.btn-two:hover::before {
+    animation-name: rotateccw;
+    animation-duration: 6s;
+}
+.btn-two:hover::after, .btn-two:hover::before {
+    left: 240px;
+    width: 520px;
+    
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}

@@ -1,15 +1,13 @@
 $('.btn_nav').click(function() {
+    $('.btn_nav').removeClass('lightButton');
     // animate content
     $('.page__style').addClass('animate_content');
-    // $('.page__description').fadeOut(100).delay(2800).fadeIn();
   
     setTimeout(function() {
       $('.page__style').removeClass('animate_content');
     }, 3200);
   
-    //remove fadeIn class after 1500ms
     setTimeout(function() {
-    //   $('.page__style').removeClass('fadeIn');
         $('.page__style').css('z-index', 3);
     }, 1500);
   
@@ -17,42 +15,43 @@ $('.btn_nav').click(function() {
   
   // on click show page after 1500ms
   $('.homeLink').click(function() {
+    $('.homeLink').addClass('lightButton');
     setTimeout(function() {
-      $('#homepage').css('z-index','9');
+      $('#homePage_SU').css('z-index','9');
     }, 1500);
   });
   
   $('.experiencesLink').click(function() {
+    $('.experiencesLink').addClass('lightButton');
     setTimeout(function() {
-    //   $('#experiencesPage').addClass('fadeIn');
-      $('#experiencesPage').css('z-index','9');
+      $('#experiencesPage_SU').css('z-index','9');
     }, 1500);
   });
   
   $('.achievementsLink').click(function() {
+    $('.achievementsLink').addClass('lightButton');
     setTimeout(function() {
-    //   $('#achievementsPage').addClass('fadeIn');
-      $('#achievementsPage').css('z-index','9');
+      $('#achievementsPage_SU').css('z-index','9');
     }, 1500);
   });
   
   $('.skillsLink').click(function() {
+    $('.skillsLink').addClass('lightButton');
     setTimeout(function() {
-    //   $('#skillsPage').addClass('fadeIn');
-      $('#skillsPage').css('z-index','9');
+      $('#skillsPage_SU').css('z-index','9');
     }, 1500);
   });
   
   $('.liferecordsLink').click(function() {
+    $('.liferecordsLink').addClass('lightButton');
     setTimeout(function() {
-    //   $('#liferecordsPage').addClass('fadeIn');
-      $('#liferecordsPage').css('z-index','9');
+      $('#liferecordsPage_SU').css('z-index','9');
     }, 1500);
   });
 
   $('.contactLink').click(function() {
+    $('.contactLink').addClass('lightButton');
     setTimeout(function() {
-    //   $('#contactPage').addClass('fadeIn');
-      $('#contactPage').css('z-index','9');
+      $('#contactPage_SU').css('z-index','9');
     }, 1500);
   });

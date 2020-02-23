@@ -17,7 +17,7 @@
             ")"
         );
         var itemLength = selectors.item.length;
-        $("#experiencesPage").scroll(function() {
+        $("#experiencesPage_SU").scroll(function() {
             var max, min;
             var pos = $(this).scrollTop();
             selectors.item.each(function(i) {
@@ -54,4 +54,4 @@
     };
 })(jQuery);
 
-$("#timeline-1").timeline();
+$(".timeline-container").timeline();

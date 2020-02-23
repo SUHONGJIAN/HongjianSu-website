@@ -1,0 +1,16 @@
+#liferecordsPage_SU {
+    overflow: hidden;
+    z-index: 2;
+}
+
+#liferecords-container {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#liferecordsPage_SU canvas {
+	background-image: radial-gradient(#666, #333);
+}

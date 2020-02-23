@@ -1,0 +1,83 @@
+#layer_profile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #0063b2;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    z-index: 10;
+}
+
+header ul {
+    list-style-type: none;
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    font-family: customFont;
+    font-weight: 900;
+    font-size: 25px;
+    transition: 0.6s ease;
+}
+
+header ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+header p {
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    color: white;
+}
+
+.profileHeader {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    position: absolute;
+    z-index: 1;
+    /* position: relative; */
+    padding: 80px 0 0 0;
+}
+.profileHeader__title {
+    color: #fff;
+    font-size: 58px;
+    font-family: customFont;
+    font-weight: normal;
+    margin: 0;
+}
+.profileHeader__subtitle {
+    color: rgba(255, 255, 255, .5);
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+.lightButton {
+    background-color: white;
+    color: black;
+}

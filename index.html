@@ -2,53 +2,39 @@
 <html lang="en">
     <head>
         <title>Homepage</title>
-        <link rel = "stylesheet" href = "style.css">
-        <link rel = "stylesheet" href = "animate.css">
-        <link rel = "stylesheet" href = "aos.css">
-        <link rel = "stylesheet" href = "skills.css">
-        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
-        <link rel="stylesheet" href="skills_overlay.css">
-        <link rel="stylesheet" href = "contact.css">
-        <script src = "typed.js"></script>
-        <script src = "anime.js"></script>
-        <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/jquery.ScrollMagic.js"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
-        <script src = "https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
-        <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
-        <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-        <script src = "aos.js"></script>
+        <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+        <link rel = "stylesheet" href = "css/animate.min.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/welcomeLayer.css">
+        <link rel = "stylesheet" href = "css/profileLayer.css">
+        <link rel = "stylesheet" href = "css/homePage.css">
+        <link rel = "stylesheet" href = "css/experiencesPage.css">
+        <link rel = "stylesheet" href = "css/achievementsPage.css">
+        <link rel = "stylesheet" href = "css/skillsPage.css">
+        <link rel = "stylesheet" href = "css/liferecordsPage.css">
+        <link rel = "stylesheet" href = "css/contactPage.css">
+        <script src = 'js/jquery.min.js'></script>
+        <script src = "js/particles.min.js"></script>
+        <script src = 'js/three.min.js'></script>
+        <script src = 'js/TweenMax.min.js'></script>
+        <script src = 'js/bas.js'></script>
+        <script src = "js/typed.js"></script>
+        <script src = "js/anime.min.js"></script>
     </head>
     <body>
-
         <div id = "layer_welcome">
             <p id = "animate" class = "center myFont">Hey, I'm <span id = "typed">Hongjian</span></p>
-            <!-- <input type = "button" id = "interested" class = "button btn-two myFont" value = "Interested"></input> -->
             <div id = "interested" class = "btn btn-two button myFont">
                 <span class = "limitedAreaCenter">Interested?</span>
             </div>
-            <script src = "typeEffects.js"></script>
             <canvas id = "fireworks"></canvas>
-            <script src = "fireworks.js"></script>
+            <script src = "js/customTyped.js"></script>
+            <script src = "js/fireworks.js"></script>
         </div>
-
         <div id = "layer_profile">
             <header>
-                <!-- <p>Hongjian</p> -->
                 <ul>
-                    <li><a class = "btn_nav homeLink">Home</a></li>
+                    <li><a class = "btn_nav homeLink lightButton">Home</a></li>
                     <li><a class = "btn_nav experiencesLink">Experiences</a></li>
                     <li><a class = "btn_nav achievementsLink">Achievements</a></li>
                     <li><a class = "btn_nav skillsLink">Skills</a></li>
@@ -56,24 +42,24 @@
                     <li><a class = "btn_nav contactLink">Contact</a></li>
                 </ul>
             </header>
-            <div class = "page__style" id = "homepage">
-                <div id = "particles-js"></div>
-                <script src = "app.js"></script>
+            <section class = "page__style" id = "homePage_SU">
                 <div class = "centerAll">
                   <div id = "aboutMe"><p>About me | </p></div>
-                  <div id = "desc"><p> Everything fantastic or marvelous attract me all the time. That's why I love coding, because there are always endless space to explore and realize something really interesting. </p></div>
+                  <div id = "desc"><p>Everything fantastic or marvelous attract me all the time. That's why I love coding, because there are always endless space to explore and realize something really interesting.</p></div>
                 </div>
-              </div>
-            <div class = "page__style" id = "experiencesPage">
-                <div class = "timeline-container" id = "timeline-1">
-                    <div class = "timeline-header" id = "timeline-header">
-                        <h2 class = "timeline-header__title">EXPERIENCES</h2>
-                        <h3 class = "timeline-header__subtitle">(为图片/subtitle预留)</h3>
+                <div id = "particles-js"></div>
+                <script src = "js/particlesBackground.js"></script>
+            </section>
+            <section class = "page__style" id = "experiencesPage_SU">
+                <div class = "timeline-container">
+                    <div class = "profileHeader">
+                        <h2 class = "profileHeader__title">EXPERIENCES</h2>
+                        <h3 class = "profileHeader__subtitle">(为图片/subtitle预留)</h3>
                     </div>
-                    <div class = "timeline" id = "timeline">
+                    <div class = "timeline">
                         <div class = "timeline-item" data-text = "Aug. 2019 - NOW">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/NYU.jpeg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/NYU.jpeg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title">New York University</h2>
                                 <p class = "timeline__content-role">M.S. in Computer Engineer</p>
                                 <p class = "timeline__content-location">New York, NY</p>
@@ -82,7 +68,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Nov. 2018 - June 2019">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/Ericsson.jpeg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/Ericsson.jpeg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title">Ericsson</h2>
                                 <p class = "timeline__content-role">Software Engineer - Full time</p>
                                 <p class = "timeline__content-location">Nanjing, China</p>
@@ -91,7 +77,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Oct. 2017 - Oct. 2018">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/Laboratory.jpg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/Laboratory.jpg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title">Laboratory of Prof. Li</h2>
                                 <p class = "timeline__content-role">Research Assistant</p>
                                 <p class = "timeline__content-location">Wuxi, China</p>
@@ -100,7 +86,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Sept. 2017 - July. 2018">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/basketball.jpeg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/basketball.jpeg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title" style = "font-size: 28px;">Men's Basketball Team</h2>
                                 <p class = "timeline__content-role">Shooting Guard</p>
                                 <p class = "timeline__content-location">Jiangnan University</p>
@@ -109,7 +95,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Aug. 2017 - Mar. 2018">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/Jingshang.jpeg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/Jingshang.jpeg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title" style = "margin-top: -85px;">Jingshang Intelligent Technology Co., Ltd.</h2>
                                 <p class = "timeline__content-role">Software Engineer - Intern</p>
                                 <p class = "timeline__content-location">Wuxi, China</p>
@@ -118,7 +104,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "July 2017 - Aug. 2017">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/singapore.jpg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/NUS.jpg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title" style = "font-size: 20px; padding-top: 10px;">National University of Singapore</h2>
                                 <p class = "timeline__content-role">Student - Summer School</p>
                                 <p class = "timeline__content-location">Singapore</p>
@@ -127,7 +113,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "May 2016 - May 2017">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/innovationProgram.png" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/innovationProgram.png" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title" style = "font-size: 18px; margin: -55px 0 20px;">College Students’ Innovation and Entrepreneurship Training Program</h2>
                                 <p class = "timeline__content-role">Program Leader</p>
                                 <p class = "timeline__content-location">Wuxi, China</p>
@@ -136,7 +122,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Sept. 2015 - July 2017">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/robotics.jpeg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/robotics.jpeg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title" style = "font-size: 26px; padding-top: 5px;">Robotics Research Club</h2>
                                 <p class = "timeline__content-role">Club Member</p>
                                 <p class = "timeline__content-location">Wuxi, China</p>
@@ -145,7 +131,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Sept. 2015 - Jan. 2016">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/studentCouncil.jpeg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/studentCouncil.jpeg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title">Student Council</h2>
                                 <p class = "timeline__content-role">Leader - The Department of Sports</p>
                                 <p class = "timeline__content-location">Jiangnan University</p>
@@ -154,7 +140,7 @@
                         </div>
                         <div class = "timeline-item" data-text = "Sept. 2014 - July 2018">
                             <div class = "timeline__content">
-                                <img class = "timeline__img" src = "images/Jiangnan6.jpg" alt = "Cannot display" />
+                                <img class = "timeline__img" src = "images/experiences/Jiangnan.jpg" alt = "Cannot display" />
                                 <h2 class = "timeline__content-title">Jiangnan University</h2>
                                 <p class = "timeline__content-role">B.S. in Internet of Things</p>
                                 <p class = "timeline__content-location">Wuxi, China</p>
@@ -163,26 +149,16 @@
                         </div>
                     </div>
                 </div>
-                <script src = "timeline.js"></script>
-                <!-- <script>
-                    AOS.init({
-                        delay: 300,
-                        duration: 1200,
-                    });
-                </script>
-                <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-anchor-placement = "bottom-bottom">Projects</div>
-                <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-offset = "50" data-aos-anchor-placement = "bottom-bottom">Project1</div>
-                <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-offset = "100" data-aos-anchor-placement = "bottom-bottom">Project2</div> -->
-              </div>
-            <div class = "page__style" id = "achievementsPage">
+                <script src = "js/timeline.js"></script>
+            </section>
+            <section class = "page__style" id = "achievementsPage_SU">
                 <div id = "achievements-container">
-                    <div class = "timeline-header" id = "timeline-header">
-                        <h2 class = "timeline-header__title">ACHIEVEMENTS</h2>
-                        <h3 class = "timeline-header__subtitle">(为图片/subtitle预留)</h3>
+                    <div class = "profileHeader">
+                        <h2 class = "profileHeader__title">ACHIEVEMENTS</h2>
+                        <h3 class = "profileHeader__subtitle">(为图片/subtitle预留)</h3>
                     </div>
                     <div class="tl-item">
-                        <!-- <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div> -->
-                        <div class="tl-bg" style="background-image: url('images/achievements1.jpeg')"></div>
+                        <div class="tl-bg" style="background-image: url('images/achievements/achievements1.jpeg')"></div>
                         <div class="tl-year">
                           <p class="f2 heading--sanSerif">Patents</p>
                         </div>
@@ -194,9 +170,9 @@
                           <h1>Software Copyright</h1>
                           <p>“Weifan Information Management System”</p>
                         </div>
-                      </div>
-                      <div class="tl-item">
-                        <div class="tl-bg" style="background-image: url('images/achievements2.jpeg')"></div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-bg" style="background-image: url('images/achievements/achievements2.jpeg')"></div>
                         <div class="tl-year">
                           <p class="f2 heading--sanSerif">Academics</p>
                         </div>
@@ -208,9 +184,9 @@
                           <h1 class="f3 text--accent ttu">National Univ. of SG</h1>
                           <p>Course: Business Analytics in the Era of Big Data</p>
                         </div>
-                      </div>
-                      <div class="tl-item">
-                        <div class="tl-bg" style="background-image: url('images/achievements3.jpeg')"></div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-bg" style="background-image: url('images/achievements/achievements3.jpeg')"></div>
                         <div class="tl-year">
                           <p class="f2 heading--sanSerif">Awards</p>
                         </div>
@@ -224,9 +200,9 @@
                             <p>University-level Excellent Graduation Thesis</p>
                             <p>...需要再去找一找</p>
                         </div>
-                      </div>
-                      <div class="tl-item">
-                        <div class="tl-bg" style="background-image: url('images/achievements4.jpeg')"></div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-bg" style="background-image: url('images/achievements/achievements4.jpeg')"></div>
                         <div class="tl-year">
                           <p class="f2 heading--sanSerif">Projects</p>
                         </div>
@@ -241,25 +217,16 @@
                           <h1 class="f3 text--accent ttu">Course projects</h1>
                           <p>too much... check my <a href = "https://github.com/SUHONGJIAN" target = "_blank">github</a> for details.</p>
                         </div>
-                      </div>
-                </div>
-              </div>
-            <div class = "page__style" id = "skillsPage">
-                <div id = "skills-container">
-                    <div class = "timeline-header" id = "timeline-header">
-                        <h2 class = "timeline-header__title">SKILLS</h2>
-                        <h3 class = "timeline-header__subtitle">(为图片/subtitle预留)</h3>
                     </div>
-
+                </div>
+            </section>
+            <section class = "page__style" id = "skillsPage_SU">
+                <div id = "skills-container">
+                    <div class = "profileHeader">
+                        <h2 class = "profileHeader__title">SKILLS</h2>
+                        <h3 class = "profileHeader__subtitle">(为图片/subtitle预留)</h3>
+                    </div>
                     <div class="stats">
-                        <!-- <div class="stats__header">
-                          <div class="stats__header-num">
-                            <p>8</p>
-                          </div>
-                          <div class="stats__header-name">
-                            <p>Alex<span>Ovechkin</span></p>
-                          </div>
-                        </div> -->
                         <ul class="stats__list">
                           <li class="stats__item">
                             <p class="stats__item-num">Java</p>
@@ -307,63 +274,42 @@
                             <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path d="M30 16.5H11.74l8.38-8.38L18 6 6 18l12 12 2.12-2.12-8.38-8.38H30v-3z"></path></svg>
                             <p id="year">skills</p>
                           </div>
-                          <!-- <div class="stats__overlay-avg">
-                            <p class="avg" id="avg">0.69</p>
-                            <p>Goals per game</p>
-                          </div> -->
-                          <div class = "demo">
-                            <dl class="list maki">
-                              <dt>Github Repository</dt>
-                              <dd><a href="#" target = "_blank">Project1</a></dd>
-                              <dd><a href="#" target = "_blank">Project2</a></dd>
-                              <dd><a href="#" target = "_blank">Project3</a></dd>
-                              <dd><a href="#" target = "_blank">Project4</a></dd>
-                              <dd><a href="#" target = "_blank">Project5</a></dd>
-                              <dd><a href="#" target = "_blank">Project6</a></dd>
-                              <dd><a href="#" target = "_blank">Project7</a></dd>
-                              <dd><a href="#" target = "_blank">Project8</a></dd>
-                            </dl>
-                            <!-- <a href="#" class="toggle">Toggle</a> -->
-                          </div>
-                          <!-- <div class="stats__overlay-info">
-                            <div class="stats__overlay-info-half">
-                              <p id="goals">50</p>
-                              <p>Goals</p>
-                            </div>
-                            <div class="stats__overlay-info-half">
-                              <p id="games">72</p>
-                              <p>Games</p>
-                            </div>
-                          </div> -->
+                          <dl class="list maki">
+                            <dt>Github Repository</dt>
+                            <dd><a href="#" target = "_blank">Project1</a></dd>
+                            <dd><a href="#" target = "_blank">Project2</a></dd>
+                            <dd><a href="#" target = "_blank">Project3</a></dd>
+                            <dd><a href="#" target = "_blank">Project4</a></dd>
+                            <dd><a href="#" target = "_blank">Project5</a></dd>
+                            <dd><a href="#" target = "_blank">Project6</a></dd>
+                            <dd><a href="#" target = "_blank">Project7</a></dd>
+                            <dd><a href="#" target = "_blank">Project8</a></dd>
+                          </dl>
                         </div>
                     </div>
-                    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-                    <script src = "skills.js"></script>
-                    <script src = "skills_overlay.js"></script>
                 </div>
-              </div>
-            <div class = "page__style" id = "liferecordsPage">
+                <script src = "js/skills.js"></script>
+                <script src = "js/skills_overlay.js"></script>
+            </section>
+            <section class = "page__style" id = "liferecordsPage_SU">
               <div id = "liferecords-container">
-                <div class = "timeline-header" id = "timeline-header">
-                  <h2 class = "timeline-header__title">Life Records</h2>
-                  <h3 class = "timeline-header__subtitle">(为图片/subtitle预留)</h3>
+                <div class = "profileHeader">
+                  <h2 class = "profileHeader__title">Life Records</h2>
+                  <h3 class = "profileHeader__subtitle">(为图片/subtitle预留)</h3>
                 </div>
                 <div id="three-container"></div>
-                <script src = "photoTransition.js"></script>
               </div>
-            </div>
-            <div class = "page__style" id = "contactPage">
+              <script src = "js/photoTransition.js"></script>
+            </section>
+            <section class = "page__style" id = "contactPage_SU">
               <div id = "contact-container">
-                <div class = "timeline-header" id = "timeline-header">
-                  <h2 class = "timeline-header__title">Contact</h2>
-                  <h3 class = "timeline-header__subtitle">(为图片/subtitle预留)</h3>
+                <div class = "profileHeader">
+                  <h2 class = "profileHeader__title">Contact</h2>
+                  <h3 class = "profileHeader__subtitle">(为图片/subtitle预留)</h3>
                 </div>
-
-                <!-- partial:index.partial.html -->
-                <div id="container">
+                <div id="formContainer">
                   <h1>&bull; Keep in Touch &bull;</h1>
-                  <div class="underline">
-                  </div>
+                  <div class="underline"></div>
                   <div class="icon_wrapper">
                     <svg class="icon" viewBox="0 0 145.192 145.192">
                       <path d="M126.82,32.694c-2.804,0-5.08,2.273-5.08,5.075v2.721c-1.462,0-2.646,1.185-2.646,2.647v1.995    c0,1.585,1.286,2.873,2.874,2.873h20.577c1.462,0,2.646-1.185,2.646-2.647v-3.041c0-1.009-0.816-1.825-1.823-1.825v-2.722    c0-2.802-2.276-5.075-5.079-5.075h-1.985v-3.829c0-3.816-3.095-6.912-6.913-6.912h-0.589h-20.45c0-2.67-2.164-4.835-4.833-4.835    H56.843c-2.67,0-4.835,2.165-4.835,4.835H34.356v-3.384h-9.563v3.384v1.178h-7.061v1.416c-2.67,0.27-10.17,1.424-13.882,5.972    c-1.773,2.17-2.44,4.791-1.983,7.793c0.463,3.043,1.271,6.346,2.128,9.841c2.354,9.616,5.024,20.515,0.549,28.077    C2.647,79.44-3.125,90.589,2.201,99.547c4.123,6.935,13.701,10.44,28.5,10.44c1.186,0,2.405-0.023,3.658-0.068v9.028h-0.296    c-2.516,0-4.558,2.039-4.558,4.558v4.566h100.04v-4.564c0-2.519-2.039-4.558-4.558-4.558h-0.297V84.631h0.297    c2.519,0,4.558-2.037,4.558-4.556v-0.009c0-2.516-2.039-4.556-4.556-4.556l-36.786-0.009V61.973c0-2.193-1.777-3.971-3.972-3.971    v-4.711h0.456c1.629,0,2.952-1.32,2.952-2.949h14.227V34.459h1.658c2.672,0,4.834-2.165,4.834-4.834h20.45v3.069H126.82z     M34.06,75.511c-2.518,0-4.558,2.04-4.558,4.556v0.009c0,2.519,2.042,4.556,4.558,4.556h0.296v24.12l-0.042-1.168    c-15.994,0.574-26.122-2.523-30.106-9.229C-0.464,90.5,4.822,80.347,6.55,77.423c4.964-8.382,2.173-19.774-0.29-29.825    c-0.843-3.442-1.639-6.696-2.088-9.638c-0.354-2.35,0.129-4.3,1.484-5.958c3.029-3.714,9.509-4.805,12.076-5.1v1.233h7.061v1.49    v2.684c-2.403,1.114-4.153,2.997-4.676,5.237H18.15c-0.584,0-1.056,0.474-1.056,1.056v0.83c0,0.584,0.475,1.056,1.056,1.056h1.984    c0.561,2.18,2.304,3.999,4.658,5.092v0.029c0,0-2.282,20.823,16.479,22.099v1.102c0,1.177,0.955,2.133,2.133,2.133h3.297    c1.178,0,2.133-0.956,2.133-2.133V50.135c0-1.177-0.955-2.132-2.133-2.132h-3.297c-1.178,0-2.133,0.955-2.133,2.132    c-1.575-0.235-5.532-1.17-6.635-4.547c2.36-1.092,4.109-2.913,4.669-5.097h1.308c0.722,0,1.309-0.584,1.309-1.308v-0.578    c0-0.584-0.475-1.056-1.056-1.056h-1.539c-0.542-2.332-2.416-4.271-4.968-5.363v-2.559h17.651c0,2.67,2.166,4.835,4.836,4.835 h2.392v15.88h13.639c0,1.629,1.321,2.949,2.951,2.949h0.899v4.711c-2.194,0-3.972,1.778-3.972,3.971v13.529L34.06,75.511z     M95.188,101.78c0,8.655-7.012,15.665-15.664,15.665c-8.653,0-15.667-7.01-15.667-15.665c0-8.647,7.014-15.664,15.667-15.664    C88.177,86.116,95.188,93.132,95.188,101.78z M97.189,45.669h-9.556c0-0.896-0.726-1.62-1.619-1.62H74.494    c-0.896,0-1.621,0.727-1.621,1.62h-8.967v-11.21h33.283V45.669z"></path>
@@ -383,10 +329,6 @@
                       <label for="email"></label>
                       <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
                     </div>
-                    <!-- <div class="telephone">
-                      <label for="name"></label>
-                      <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
-                    </div> -->
                     <div class="subject">
                       <label for="subject"></label>
                       <select placeholder="Subject line" name="subject" id="subject_input" required>
@@ -405,10 +347,8 @@
                     <div class="submit">
                       <input type="submit" value="Send Message" id="form_button" />
                     </div>
-                  </form><!-- // End form -->
-                </div><!-- // End #container -->
-                <!-- partial -->
-
+                  </form>
+                </div>
                 <div class="support">
                   <a href="mailto:suhjboy@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
                   <a href="https://www.linkedin.com/in/hongjiansu/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -416,15 +356,9 @@
                   <a href="https://www.facebook.com/hongjian.su.526" target="_blank"><i class="fab fa-facebook-f"></i></a>
                   <a href="/images/wechat.png" target="_blank"><i class="fab fa-weixin"></i></a>
                 </div>
-
               </div>
-            </div>
-            <script src = "pageTransition.js"></script>
-            <!-- <canvas id = "canvas"></canvas>
-            <script src = "tearableCloth.js"></script>
-            <script src = "clickSimulation.js"></script> -->
+            </section>
+            <script src = "js/pageTransition.js"></script>
         </div>
-        <!-- <script src = "scrollController.js"></script> -->
-
     </body>
 </html>
