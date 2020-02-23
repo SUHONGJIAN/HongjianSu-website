@@ -28,6 +28,7 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
         <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
         <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
         <script src = "aos.js"></script>
     </head>
     <body>
@@ -47,23 +48,23 @@
             <header>
                 <!-- <p>Hongjian</p> -->
                 <ul>
-                    <li><a href = "#page1">Home</a></li>
-                    <li><a href = "#">Experiences</a></li>
-                    <li><a href = "#">Achievements</a></li>
-                    <li><a href = "#">Skills</a></li>
-                    <li><a href = "#">LifeRecords</a></li>
-                    <li><a href = "#">Contact</a></li>
+                    <li><a class = "btn_nav homeLink">Home</a></li>
+                    <li><a class = "btn_nav experiencesLink">Experiences</a></li>
+                    <li><a class = "btn_nav achievementsLink">Achievements</a></li>
+                    <li><a class = "btn_nav skillsLink">Skills</a></li>
+                    <li><a class = "btn_nav liferecordsLink">LifeRecords</a></li>
+                    <li><a class = "btn_nav contactLink">Contact</a></li>
                 </ul>
             </header>
-            <section class = "panel" id = "homepage">
+            <div class = "page__style" id = "homepage">
                 <div id = "particles-js"></div>
                 <script src = "app.js"></script>
                 <div class = "centerAll">
                   <div id = "aboutMe"><p>About me | </p></div>
                   <div id = "desc"><p> Everything fantastic or marvelous attract me all the time. That's why I love coding, because there are always endless space to explore and realize something really interesting. </p></div>
                 </div>
-            </section>
-            <section class = "panel" id = "experiencesPage">
+              </div>
+            <div class = "page__style" id = "experiencesPage">
                 <div class = "timeline-container" id = "timeline-1">
                     <div class = "timeline-header" id = "timeline-header">
                         <h2 class = "timeline-header__title">EXPERIENCES</h2>
@@ -172,8 +173,8 @@
                 <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-anchor-placement = "bottom-bottom">Projects</div>
                 <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-offset = "50" data-aos-anchor-placement = "bottom-bottom">Project1</div>
                 <div data-aos = "fade-down" data-aos-anchor = "#homepage" data-aos-offset = "100" data-aos-anchor-placement = "bottom-bottom">Project2</div> -->
-            </section>
-            <section class = "panel" id = "achievementsPage">
+              </div>
+            <div class = "page__style" id = "achievementsPage">
                 <div id = "achievements-container">
                     <div class = "timeline-header" id = "timeline-header">
                         <h2 class = "timeline-header__title">ACHIEVEMENTS</h2>
@@ -242,8 +243,8 @@
                         </div>
                       </div>
                 </div>
-            </section>
-            <section class = "panel" id = "skillsPage">
+              </div>
+            <div class = "page__style" id = "skillsPage">
                 <div id = "skills-container">
                     <div class = "timeline-header" id = "timeline-header">
                         <h2 class = "timeline-header__title">SKILLS</h2>
@@ -340,8 +341,8 @@
                     <script src = "skills.js"></script>
                     <script src = "skills_overlay.js"></script>
                 </div>
-            </section>
-            <section class = "panel" id = "liferecordsPage">
+              </div>
+            <div class = "page__style" id = "liferecordsPage">
               <div id = "liferecords-container">
                 <div class = "timeline-header" id = "timeline-header">
                   <h2 class = "timeline-header__title">Life Records</h2>
@@ -350,8 +351,8 @@
                 <div id="three-container"></div>
                 <script src = "photoTransition.js"></script>
               </div>
-            </section>
-            <section class = "panel" id = "contactPage">
+            </div>
+            <div class = "page__style" id = "contactPage">
               <div id = "contact-container">
                 <div class = "timeline-header" id = "timeline-header">
                   <h2 class = "timeline-header__title">Contact</h2>
@@ -417,12 +418,13 @@
                 </div>
 
               </div>
-            </section>
+            </div>
+            <script src = "pageTransition.js"></script>
             <!-- <canvas id = "canvas"></canvas>
             <script src = "tearableCloth.js"></script>
             <script src = "clickSimulation.js"></script> -->
         </div>
-        <script src = "scrollController.js"></script>
+        <!-- <script src = "scrollController.js"></script> -->
 
     </body>
 </html>
