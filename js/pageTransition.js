@@ -18,6 +18,8 @@ $('.btn_nav').click(function() {
     $('.homeLink').addClass('lightButton');
     setTimeout(function() {
       $('#homePage_SU').css('z-index','9');
+      tl.paused(true);
+      pJSDom[0].pJS.particles.move.enable = true;
     }, 1500);
   });
   
@@ -25,6 +27,8 @@ $('.btn_nav').click(function() {
     $('.experiencesLink').addClass('lightButton');
     setTimeout(function() {
       $('#experiencesPage_SU').css('z-index','9');
+      tl.paused(true);
+      pJSDom[0].pJS.particles.move.enable = false;
     }, 1500);
   });
   
@@ -32,6 +36,8 @@ $('.btn_nav').click(function() {
     $('.achievementsLink').addClass('lightButton');
     setTimeout(function() {
       $('#achievementsPage_SU').css('z-index','9');
+      tl.paused(true);
+      pJSDom[0].pJS.particles.move.enable = false;
     }, 1500);
   });
   
@@ -39,6 +45,8 @@ $('.btn_nav').click(function() {
     $('.skillsLink').addClass('lightButton');
     setTimeout(function() {
       $('#skillsPage_SU').css('z-index','9');
+      tl.paused(true);
+      pJSDom[0].pJS.particles.move.enable = false;
     }, 1500);
   });
   
@@ -46,6 +54,8 @@ $('.btn_nav').click(function() {
     $('.liferecordsLink').addClass('lightButton');
     setTimeout(function() {
       $('#liferecordsPage_SU').css('z-index','9');
+      tl.paused(false);
+      pJSDom[0].pJS.particles.move.enable = false;
     }, 1500);
   });
 
@@ -53,5 +63,7 @@ $('.btn_nav').click(function() {
     $('.contactLink').addClass('lightButton');
     setTimeout(function() {
       $('#contactPage_SU').css('z-index','9');
+      tl.paused(true);
+      pJSDom[0].pJS.particles.move.enable = false;
     }, 1500);
   });

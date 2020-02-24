@@ -33,7 +33,7 @@ function init() {
 
   var i = 2;
   var toggle = true;
-  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true, onRepeat: function() {
+  window.tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true, onRepeat: function() {
     i++;
     if (i > 23) {
       i = 1;
@@ -54,10 +54,11 @@ function init() {
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
+  tl.paused(true);
 
-  createTweenScrubber(tl);
+  // createTweenScrubber(tl);
 
-  window.addEventListener('keyup', function(e) {
+  document.getElementById('three-container').addEventListener('keyup', function(e) {
     if (e.keyCode === 80) {
       tl.paused(!tl.paused());
     }
