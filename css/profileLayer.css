@@ -5,6 +5,7 @@
     top: 0;
     background-color: #0063b2;
     overflow: hidden;
+    transition: background-color 3s;
 }
 
 header {
@@ -34,7 +35,7 @@ header ul li a {
     font-family: customFont;
     font-weight: 900;
     font-size: 25px;
-    transition: 0.6s ease;
+    transition: all 1s ease;
 }
 
 header ul li a:hover {
@@ -80,4 +81,39 @@ header p {
 .lightButton {
     background-color: white;
     color: black;
+}
+
+.btn_nav {
+    cursor: pointer;
+}
+
+#leftArrow {
+    position: absolute;
+    top: 50%;
+    color: white;
+    z-index: 10;
+    left: 2%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#leftArrow:hover {
+    transform: scale(1.2) translateY(-42%);
+}
+
+#rightArrow {
+    position: absolute;
+    top: 50%;
+    color: white;
+    z-index: 10;
+    right: 2%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#rightArrow:hover {
+    transform: scale(1.2) translateY(-42%);
+    /* 这里的-42%是靠试的, 无兼容性。正确的算法需要根据translateY()的原理算，应该是-0.2*(原图形上边缘到顶端的距离)-0.1*(原图形的高度), 需要找到合适方法表示 */
 }

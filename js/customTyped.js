@@ -2,7 +2,7 @@ let options1 = {
     strings: ["Hongjian", "a NYU stu.", "a Ericsson ex-eng."],
     typeSpeed: 80,
     backSpeed: 50,
-    startDelay: 3200,
+    startDelay: 3450,
     backDelay: 800,
     cursorChar: "_",
     onBegin: (self) => {
@@ -14,7 +14,7 @@ let options1 = {
         setTimeout(function() {
             let element = document.querySelector('#typed');
             element.classList.add('animated', 'rubberBand')
-        }, 1700);
+        }, 1850);
     },
     preStringTyped: (arrayPos, self) => {
         if(arrayPos == 1) {
@@ -34,17 +34,17 @@ let options1 = {
                     document.getElementById('animate').innerHTML = "I love "
                     document.getElementById("animate").appendChild(node);
                     let typed2 = new Typed('#typed2', options2);
-                }, 400)
-            }, 800)
+                }, 500)
+            }, 300)
         }, 1200)
     },
 }
 
 let options2 = {
-    strings: ["basketball", "coding", "learning all new things!"],
+    strings: ["playing basketball", "coding", "learning all new things!"],
     typeSpeed: 80,
     backSpeed: 50,
-    startDelay: 1300,
+    startDelay: 850,
     backDelay: 800,
     cursorChar: "_",
     onBegin: (self) => {
@@ -62,15 +62,9 @@ let options2 = {
                 document.getElementById("interested").style.visibility = "visible";
                 let element = document.querySelector("#interested");
                 element.classList.add('animated', 'flipInX');
-                // element.addEventListener("click", function() {
-                //     element.classList.add('animated', 'flipOutX');
-                // })
                 $("#interested").click(function() {
                     $('html,body').animate({scrollTop: $("#layer_profile").offset().top}, 'slow');
                 });
-                // document.getElementById('interested').addEventListener("click", function() {
-                //     document.querySelector("#layer_welcome").classList.add('animated', 'flipOutX');
-                // })
             }, 1500)
         }, 1500)
     },

@@ -1,4 +1,6 @@
 window.human = false;
+window.stopFire = false;
+window.autoFire = true;
 
 var canvasEl = document.querySelector('#fireworks');
 var ctx2 = canvasEl.getContext('2d');
@@ -147,7 +149,10 @@ function autoClick() {
     anime.random(0, window.innerWidth),
     anime.random(0, window.innerHeight)
   );
-  anime({duration: 200}).finished.then(autoClick);
+  if (window.stopFire == false) {
+    anime({duration: 200}).finished.then(autoClick);
+    window.autoFire = true;
+  }
 }
 
 autoClick();

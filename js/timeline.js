@@ -37,6 +37,7 @@
                         ")"
                     );
                     selectors.item.last().addClass(selectors.activeClass);
+                    $('#downArrow').css('animation', 'none');
                 } else if (pos <= max - 40 && pos >= min) {
                     selectors.id.css(
                         "background-image",
@@ -48,6 +49,7 @@
                     );
                     selectors.item.removeClass(selectors.activeClass);
                     $(this).addClass(selectors.activeClass);
+                    $('#downArrow').css('animation', 'downArrowBlink 1s linear infinite alternate');
                 }
             });
         });

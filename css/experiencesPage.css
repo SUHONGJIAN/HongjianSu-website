@@ -1,12 +1,33 @@
 #experiencesPage_SU {
-    background-color: white;
     overflow: auto;
     z-index: 5;
 }
 
+#downArrow {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 1;
+    opacity: 0;
+    /* animation: downArrowBlink 1s infinite alternate paused;
+    -webkit-animation: downArrowBlink 1s infinite alternate paused; */
+}
+
+@keyframes downArrowBlink {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes downArrowBlink {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 .timeline-container {
     width: 100%;
-    position: relative;
+    position: absolute;
     /* padding: 80px 0; */
     transition: 0.3s ease 0s;
     background-attachment: fixed;

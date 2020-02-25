@@ -9,6 +9,7 @@
     user-select:none;
     z-index: 1;
     overflow: hidden;
+    transition: background-color 1.5s;
 }
 
 .myFont {
