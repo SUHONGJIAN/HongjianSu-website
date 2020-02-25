@@ -5,10 +5,7 @@ var overlay = $('.stats__overlay');
 var back = $('.stats__overlay-back');
 var isOpen = false;
 
-var vYear = $('#year');
-var vAvg = $('#avg');
-var vGames = $('#games');
-var vGoal = $('#goals');
+var skill = $('#skill');
 var projects = $('.list a');
 
 $(document).on('ready', function() {
@@ -53,41 +50,49 @@ function showOverlay() {
 
 var data = [
   {
+    skill: 'Java',
     total: 8,
     text: ['Self Introduction App','Dodge MiniGame','Fortification Simulation [Concurrency]','Smart Dictionary Implementation','Stop Villain Simulation','Chef Simulation','RSA Encryp/Decryp', 'DES Encryp/Decryp'],
     href: ['https://github.com/SUHONGJIAN/JAVA-Application-Self-introduction-SU','https://github.com/SUHONGJIAN/Dodge-MiniGame','https://github.com/SUHONGJIAN/Concurrency-BlockingQueue-ExecutorService','https://github.com/SUHONGJIAN/Trie-Structure-Implementation','https://github.com/SUHONGJIAN/Stop-the-Evil-Villain-Simulation','https://github.com/SUHONGJIAN/Five-star-Restaurant-Chef-Simulation','https://github.com/SUHONGJIAN/Information_Security-RSA-Encryption_decryption-JAVA','https://github.com/SUHONGJIAN/Information_Security-DES-Encryption_decryption-JAVA'], 
   },
   {
+    skill: 'Python',
     total: 1,
     text: ['Enterprise-level App [Django]'],
     href: ['https://github.com/SUHONGJIAN/-Engineering-project-WeiFan-company-backdend-Django-']
   },
   {
+    skill: 'HTML/CSS',
     total: 1,
-    text: ['This Website!'],
+    text: ['This Website!<br/>[Lib: font awesome, animate...]'],
     href: ['#']
   },
   {
+    skill: 'JavaScript',
     total: 1,
-    text: ['This Website!'],
+    text: ['This Website!<br/>[Lib: jQuery, anime, three...]'],
     href: ['#']
   },
   {
+    skill: 'C#',
     total: 1,
     text: ['Real-time Display Web'],
     href: ['https://github.com/SUHONGJIAN/Azure-webapp']
   },
   {
+    skill: 'Matlab',
     total: 8,
     text: ['Clear Blurred Images', 'Spam Email Filtering [SVM]', 'Face Recognization [PCA]','Recognization of Moving Objects','Skin Color Detection','Positioning Algorithms','Distrubuted Simulation','RFID-related Simulation'],
     href: ['https://github.com/SUHONGJIAN/Matlab-make-blurred-images-clear','https://github.com/SUHONGJIAN/Matlab-Support_Vector_Machine-Spam_filtering','https://github.com/SUHONGJIAN/Matlab-Visual-Processing-Advanced-Face-perception','https://github.com/SUHONGJIAN/Matlab-Visual-Processing-Moving-target-segmentation','https://github.com/SUHONGJIAN/Matlab-Visual-Processing-Skin_color-detection','https://github.com/SUHONGJIAN/Matlab-5_different_positioning_algorithms','https://github.com/SUHONGJIAN/Matlab-Distributed_sensoorithm_judege_LEACH-clustering-energy-exhaustion','https://github.com/SUHONGJIAN/Matlab-RFID_related_experiments']
   },
   {
+    skill: 'SQL',
     total: 1,
     text: ['Enterprise-level App [MySQL]'],
     href: ['https://github.com/SUHONGJIAN/-Engineering-project-WeiFan-company-backdend-Django-']
   },
   {
+    skill: 'C++',
     total: 3,
     text: ['Branch Prediction Simulator','Single-cycle MIPS Simulation', 'Pipeline MIPS Simulation'],
     href: ['https://github.com/SUHONGJIAN/Branch_Prediction_Simulation', 'https://github.com/SUHONGJIAN/Single_Cycle_MIPS_Simulation','https://github.com/SUHONGJIAN/Pipeline_MIPS_Simulation']
@@ -97,10 +102,11 @@ var data = [
 function updateInfo(index) {
 
   var total = data[index].total;
+  skill.text(data[index].skill);
 
   for (i = 0; i < total; i++) {
     projects.eq(i).css("visibility", "visible");
-    projects.eq(i).text(data[index].text[i]);
+    projects.eq(i).html(data[index].text[i]);
     projects.eq(i).attr("href", data[index].href[i]);
     projects.eq(i).css("border-radius", "0 0 0 0");
   }
@@ -108,8 +114,8 @@ function updateInfo(index) {
   projects.eq(total-1).css("border-radius", "0 0 40px 40px");
 
   for (i = total; i < 8; i++) {
-    projects.eq(i).css("visibility", "hidden");
-    projects.eq(i).text('');
+    projects.eq(i).parent().css("visibility", "hidden");
+    projects.eq(i).html('');
     projects.eq(i).attr("href", '');
   }
 

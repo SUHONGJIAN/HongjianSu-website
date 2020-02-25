@@ -39,6 +39,7 @@ $('.homeLink').click(function() {
     pJSDom[0].pJS.particles.move.enable = true;
     pJSDom[0].pJS.fn.particlesRefresh();
   }, 1500);
+  window.currentPageIndex = 0;
 });
 
 $('.experiencesLink').click(function() {
@@ -48,6 +49,7 @@ $('.experiencesLink').click(function() {
     tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1500);
+  window.currentPageIndex = 1;
 });
 
 $('.achievementsLink').click(function() {
@@ -57,6 +59,7 @@ $('.achievementsLink').click(function() {
     window.tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1500);
+  window.currentPageIndex = 2;
 });
 
 $('.skillsLink').click(function() {
@@ -66,6 +69,7 @@ $('.skillsLink').click(function() {
     tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1500);
+  window.currentPageIndex = 3;
 });
 
 $('.liferecordsLink').click(function() {
@@ -75,6 +79,7 @@ $('.liferecordsLink').click(function() {
     window.tl.paused(false);
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1500);
+  window.currentPageIndex = 4;
 });
 
 $('.contactLink').click(function() {
@@ -84,6 +89,7 @@ $('.contactLink').click(function() {
     window.tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1500);
+  window.currentPageIndex = 5;
 });
 
 // arrows functionality

@@ -66,7 +66,7 @@ header p {
     color: #fff;
     font-size: 58px;
     font-family: customFont;
-    font-weight: normal;
+    font-weight: 550;
     margin: 0;
 }
 .profileHeader__subtitle {
@@ -94,12 +94,6 @@ header p {
     z-index: 10;
     left: 2%;
     transform: translateY(-50%);
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-#leftArrow:hover {
-    transform: scale(1.2) translateY(-42%);
 }
 
 #rightArrow {
@@ -109,11 +103,24 @@ header p {
     z-index: 10;
     right: 2%;
     transform: translateY(-50%);
+}
+
+.arrow {
     transition: all 0.5s;
     cursor: pointer;
 }
 
-#rightArrow:hover {
-    transform: scale(1.2) translateY(-42%);
-    /* 这里的-42%是靠试的, 无兼容性。正确的算法需要根据translateY()的原理算，应该是-0.2*(原图形上边缘到顶端的距离)-0.1*(原图形的高度), 需要找到合适方法表示 */
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    float: left;
+}
+
+#logo img {
+    height: 65px;
 }
