@@ -91,7 +91,7 @@ header p {
     position: absolute;
     top: 50%;
     color: white;
-    z-index: 9;
+    z-index: 10;
     left: 2%;
     transform: translateY(-50%);
 }
@@ -100,7 +100,7 @@ header p {
     position: absolute;
     top: 50%;
     color: white;
-    z-index: 9;
+    z-index: 10;
     right: 2%;
     transform: translateY(-50%);
 }
@@ -119,6 +119,7 @@ header p {
     top: 0;
     left: 2%;
     float: left;
+    z-index: -1;
 }
 
 #logo img {
