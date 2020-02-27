@@ -65,13 +65,13 @@ var data = [
     skill: 'HTML/CSS',
     total: 1,
     text: ['This Website!<br/>[Lib: font awesome, animate...]'],
-    href: ['#']
+    href: ['https://github.com/SUHONGJIAN/HongjianSu-website']
   },
   {
     skill: 'JavaScript',
     total: 1,
     text: ['This Website!<br/>[Lib: jQuery, anime, three...]'],
-    href: ['#']
+    href: ['https://github.com/SUHONGJIAN/HongjianSu-website']
   },
   {
     skill: 'C#',
