@@ -24,7 +24,6 @@
                 // min = $(this).offset().top - $(this).parent().offset().top + $(this).parent().position().top;
                 min = $(this).position().top + $(this).parent().position().top;
                 max = $(this).height() + min;
-                var that = $(this);
                 if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
                     selectors.item.removeClass(selectors.activeClass);
                     selectors.id.css(

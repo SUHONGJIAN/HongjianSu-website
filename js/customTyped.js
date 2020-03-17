@@ -1,9 +1,9 @@
 let options1 = {
     strings: ["Hongjian", "a NYU stu.", "a Ericsson ex-eng."],
-    typeSpeed: 80,
-    backSpeed: 50,
+    typeSpeed: 100,
+    backSpeed: 55,
     startDelay: 3450,
-    backDelay: 800,
+    backDelay: 1600,
     cursorChar: "_",
     onBegin: (self) => {
         setTimeout(function() {
@@ -36,16 +36,16 @@ let options1 = {
                     let typed2 = new Typed('#typed2', options2);
                 }, 500)
             }, 300)
-        }, 1200)
+        }, 2000)
     },
 }
 
 let options2 = {
     strings: ["playing basketball", "coding", "learning all new things!"],
-    typeSpeed: 80,
-    backSpeed: 50,
-    startDelay: 850,
-    backDelay: 800,
+    typeSpeed: 100,
+    backSpeed: 55,
+    startDelay: 1200,
+    backDelay: 1600,
     cursorChar: "_",
     onBegin: (self) => {
         document.getElementById("animate").style.color = "#282741";

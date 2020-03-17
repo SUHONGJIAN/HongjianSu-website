@@ -22,11 +22,11 @@ $('.btn_nav').click(function() {
 
   setTimeout(function() {
     $('.page__style').removeClass('animate_content');
-  }, 3200);
+  }, 3000);
 
   setTimeout(function() {
       $('.page__style').css('z-index', 3);
-  }, 1500);
+  }, 1000);
   
 });
   
@@ -38,7 +38,7 @@ $('.homeLink').click(function() {
     window.tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = true;
     pJSDom[0].pJS.fn.particlesRefresh();
-  }, 1500);
+  }, 1000);
   window.currentPageIndex = 0;
 });
 
@@ -48,7 +48,7 @@ $('.experiencesLink').click(function() {
     $('#experiencesPage_SU').css('z-index','9');
     tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
-  }, 1500);
+  }, 1000);
   window.currentPageIndex = 1;
 });
 
@@ -58,7 +58,7 @@ $('.achievementsLink').click(function() {
     $('#achievementsPage_SU').css('z-index','9');
     window.tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
-  }, 1500);
+  }, 1000);
   window.currentPageIndex = 2;
 });
 
@@ -68,7 +68,7 @@ $('.skillsLink').click(function() {
     $('#skillsPage_SU').css('z-index','9');
     tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
-  }, 1500);
+  }, 1000);
   window.currentPageIndex = 3;
 });
 
@@ -78,7 +78,7 @@ $('.liferecordsLink').click(function() {
     $('#liferecordsPage_SU').css('z-index','9');
     window.tl.paused(false);
     pJSDom[0].pJS.particles.move.enable = false;
-  }, 1500);
+  }, 1000);
   window.currentPageIndex = 4;
 });
 
@@ -88,87 +88,100 @@ $('.contactLink').click(function() {
     $('#contactPage_SU').css('z-index','9');
     window.tl.paused(true);
     pJSDom[0].pJS.particles.move.enable = false;
-  }, 1500);
+  }, 1000);
   window.currentPageIndex = 5;
 });
 
-// arrows functionality
-function arrowsHelper(toPage) {
-  if (toPage == 4) {
-    window.tl.paused(false);
-  } else {
-    window.tl.paused(true);
-  }
-  if (toPage == 0) {
-    pJSDom[0].pJS.particles.move.enable = true;
-    pJSDom[0].pJS.fn.particlesRefresh();
-  } else {
-    pJSDom[0].pJS.particles.move.enable = false;
-  }
-  // change css format of navigation button
-  $('.btn_nav').removeClass('lightButton');
-  $(window.pagesLink[toPage]).addClass('lightButton');
+// // arrows functionality
+// function arrowsHelper(toPage) {
+//   // if (window.initDone == true) {
+//   //   if (toPage == 4) {
+//   //     window.tl.paused(false);
+//   //   } else {
+//   //     window.tl.paused(true);
+//   //   }
+//   // }
+//   if (window.initDone == false && window.currentPageIndex == 4) {
+//     initFunction();
+//   } else if (window.initDone == true && window.currentPageIndex == 4) {
+//       window.tl.paused(false);
+//   } else if (window.initDone == true) {
+//       window.tl.paused(true);
+//   }
+//   if (toPage == 0) {
+//     pJSDom[0].pJS.particles.move.enable = true;
+//     pJSDom[0].pJS.fn.particlesRefresh();
+//   } else {
+//     pJSDom[0].pJS.particles.move.enable = false;
+//   }
+//   // change css format of navigation button
+//   $('.btn_nav').removeClass('lightButton');
+//   $(window.pagesLink[toPage]).addClass('lightButton');
 
-  // transform the background color randomly
-  window.backgroundColors.splice(window.backgroundColors.indexOf(window.prevBGColor), 1);
-  window.currentBGColor = window.backgroundColors[Math.floor(Math.random() * window.backgroundColors.length)];
-  $('#layer_profile').css('background-color', currentBGColor);
-  window.backgroundColors.push(window.prevBGColor);
-  window.prevBGColor = window.currentBGColor;
+//   // transform the background color randomly
+//   window.backgroundColors.splice(window.backgroundColors.indexOf(window.prevBGColor), 1);
+//   window.currentBGColor = window.backgroundColors[Math.floor(Math.random() * window.backgroundColors.length)];
+//   $('#layer_profile').css('background-color', currentBGColor);
+//   window.backgroundColors.push(window.prevBGColor);
+//   window.prevBGColor = window.currentBGColor;
 
-  // animate content
-  $('.page__style').addClass('animate_content');
+//   // animate content
+//   $('.page__style').addClass('animate_content');
 
-  setTimeout(function() {
-    $('.page__style').removeClass('animate_content');
-  }, 3200);
+//   setTimeout(function() {
+//     $('.page__style').removeClass('animate_content');
+//   }, 3200);
 
-  setTimeout(function() {
-      $('.page__style').css('z-index', 3);
-  }, 1500);
+//   setTimeout(function() {
+//       $('.page__style').css('z-index', 3);
+//   }, 1500);
 
-  setTimeout(function() {
-    $(window.pages[toPage]).css('z-index','9');
-  }, 1500);
-}
+//   setTimeout(function() {
+//     $(window.pages[toPage]).css('z-index','9');
+//   }, 1500);
+// }
 
-$('#leftArrow').click(function() {
-  if (window.currentPageIndex > 0) {
-    window.currentPageIndex--;
-  } else {
-    window.currentPageIndex = window.pages.length - 1;
-  }
-  arrowsHelper(window.currentPageIndex);
-});
+// $('#leftArrow').click(function() {
+//   if (window.currentPageIndex > 0) {
+//     window.currentPageIndex--;
+//   } else {
+//     window.currentPageIndex = window.pages.length - 1;
+//   }
+//   arrowsHelper(window.currentPageIndex);
+// });
 
-$('#rightArrow').click(function() {
-  if (window.currentPageIndex < window.pages.length - 1) {
-    window.currentPageIndex++;
-  } else {
-    window.currentPageIndex = 0;
-  }
-  arrowsHelper(window.currentPageIndex);
-});
+// $('#rightArrow').click(function() {
+//   if (window.currentPageIndex < window.pages.length - 1) {
+//     window.currentPageIndex++;
+//   } else {
+//     window.currentPageIndex = 0;
+//   }
+//   arrowsHelper(window.currentPageIndex);
+// });
 
-var layerProfileHeight = $('#layer_profile').height();
-$(window).scroll(function() {
-    if ($('html').scrollTop() < layerProfileHeight / 2) {
-        $('#downArrow').css('animation', 'none');
-        window.stopFire = false;
-        if (window.autoFire == false) {
-            autoClick();
-        }
-        pJSDom[0].pJS.particles.move.enable = false;
-        window.autoParticles = false;
-    } else {
-        $('#downArrow').css('animation', 'downArrowBlink 1s linear infinite alternate');
-        window.stopFire = true;
-        window.autoFire = false;
-        if (window.autoParticles == false) {
-            pJSDom[0].pJS.particles.move.enable = true;
-            pJSDom[0].pJS.fn.particlesRefresh();
-            window.autoParticles = true;
-        }
+
+
+
+
+// var layerProfileHeight = $('#layer_profile').height();
+// $(window).scroll(function() {
+//     if ($('html').scrollTop() < layerProfileHeight / 2) {
+//         $('#downArrow').css('animation', 'none');
+//         window.stopFire = false;
+//         if (window.autoFire == false) {
+//             autoClick();
+//         }
+//         pJSDom[0].pJS.particles.move.enable = false;
+//         window.autoParticles = false;
+//     } else {
+//         $('#downArrow').css('animation', 'downArrowBlink 1s linear infinite alternate');
+//         window.stopFire = true;
+//         window.autoFire = false;
+//         if (window.autoParticles == false) {
+//             pJSDom[0].pJS.particles.move.enable = true;
+//             pJSDom[0].pJS.fn.particlesRefresh();
+//             window.autoParticles = true;
+//         }
         
-    }
-});
+//     }
+// });

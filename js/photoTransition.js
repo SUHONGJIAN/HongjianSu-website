@@ -1,7 +1,7 @@
-window.onload = init;
-console.ward = function() {}; // what warnings?
+// window.onload = init;
+// console.ward = function() {}; // what warnings?
 
-function init() {
+export function init() {
   var root = new THREERoot({
     createCameraControls: !true,
     antialias: (window.devicePixelRatio === 1),
@@ -18,7 +18,7 @@ function init() {
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-  l1.load('images/lifeRecords/1.jpg', function(img) {
+  l1.load('images/lifeRecords/1-min.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
@@ -26,7 +26,7 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	l2.load('images/lifeRecords/2.jpg', function(img) {
+	l2.load('images/lifeRecords/2-min.jpg', function(img) {
 		slide2.setImage(img);
   })
   root.scene.add(slide2);
@@ -38,7 +38,7 @@ function init() {
     if (i > 23) {
       i = 1;
     }
-    var picture = 'images/lifeRecords/'+i+'.jpg';
+    var picture = 'images/lifeRecords/' + i + '-min.jpg';
     if (toggle) {
       l1.load(picture, function(img) {
         slide.setImage(img);
@@ -54,7 +54,7 @@ function init() {
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
-  tl.paused(true);
+  // tl.paused(true);
 
   // createTweenScrubber(tl);
 
