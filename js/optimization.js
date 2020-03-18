@@ -1,9 +1,5 @@
 import {init} from "./photoTransition.js";
 
-// document.getElementById("interested").addEventListener('click', e => {
-//     e.preventDefault();
-    
-// });
 window.initDone = false;
 
 $(window).scroll(function() {
@@ -26,41 +22,9 @@ $('.liferecordsLink').click(function() {
     }
 });
 
-// $('#leftArrow').click(function() {
-//     if (initDone == false && window.currentPageIndex == 4) {
-//         setTimeout(function() {
-//             init();
-//             initDone = true;
-//         }, 1000);
-//     } else if (initDone == true && window.currentPageIndex == 4) {
-//         window.tl.paused(false);
-//     } else if (initDone == true) {
-//         window.tl.paused(true);
-//     }
-// });
-
-// $('#rightArrow').click(function() {
-//     if (initDone == false && window.currentPageIndex == 4) {
-//         setTimeout(function() {
-//             init();
-//         }, 1000);
-//         initDone = true;
-//     } else if (initDone == true && window.currentPageIndex == 4) {
-//         window.tl.paused(false);
-//     } else if (initDone == true) {
-//         window.tl.paused(true);
-//     }
-// });
 
 // arrows functionality
 function arrowsHelper(toPage) {
-    // if (window.initDone == true) {
-    //   if (toPage == 4) {
-    //     window.tl.paused(false);
-    //   } else {
-    //     window.tl.paused(true);
-    //   }
-    // }
     if (window.initDone == false && window.currentPageIndex == 4) {
         initFunction();
     } else if (window.initDone == true && window.currentPageIndex == 4) {

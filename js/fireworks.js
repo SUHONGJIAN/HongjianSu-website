@@ -150,7 +150,7 @@ function autoClick() {
     anime.random(0, window.innerHeight)
   );
   if (window.stopFire == false) {
-    anime({duration: 200}).finished.then(autoClick);
+    anime({duration: 300}).finished.then(autoClick);
     window.autoFire = true;
   }
 }

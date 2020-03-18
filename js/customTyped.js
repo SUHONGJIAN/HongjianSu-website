@@ -3,7 +3,7 @@ let options1 = {
     typeSpeed: 100,
     backSpeed: 55,
     startDelay: 3450,
-    backDelay: 1600,
+    backDelay: 1300,
     cursorChar: "_",
     onBegin: (self) => {
         setTimeout(function() {
@@ -45,7 +45,7 @@ let options2 = {
     typeSpeed: 100,
     backSpeed: 55,
     startDelay: 1200,
-    backDelay: 1600,
+    backDelay: 1300,
     cursorChar: "_",
     onBegin: (self) => {
         document.getElementById("animate").style.color = "#282741";

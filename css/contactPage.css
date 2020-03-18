@@ -142,6 +142,7 @@ textarea {
 #formContainer {
   border: solid 3px #474544;
   max-width: 768px;
+  max-height: 600px;
   margin: 190px auto 35px;
   position: relative;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -300,6 +301,12 @@ textarea {
   color: #F2F3EB;
 }
 
+@media screen and (max-device-width: 768px) {
+  #formContainer {
+    margin: auto;
+    width: 95%;
+  }
+}
 @media screen and (max-width: 768px) {
   #formContainer {
     margin: 20px auto;

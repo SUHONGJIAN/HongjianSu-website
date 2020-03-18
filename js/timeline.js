@@ -21,7 +21,6 @@
             var max, min;
             var pos = $(this).scrollTop();
             selectors.item.each(function(i) {
-                // min = $(this).offset().top - $(this).parent().offset().top + $(this).parent().position().top;
                 min = $(this).position().top + $(this).parent().position().top;
                 max = $(this).height() + min;
                 if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
@@ -52,6 +51,20 @@
                 }
             });
         });
+        selectors.item.each(function(i) {
+            $(this).click(function() {
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    $(this)
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                selectors.item.removeClass(selectors.activeClass);
+                $(this).addClass(selectors.activeClass);
+        });
+    });
     };
 })(jQuery);
 
