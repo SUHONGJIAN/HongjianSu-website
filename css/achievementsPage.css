@@ -98,14 +98,14 @@
 }
 .tl-content h1 {
     font-family: customFont;
-    font-weight: bold;
     text-transform: uppercase;
     color: #1779cf;
     font-size: 1.44rem;
-    font-weight: normal;
+    font-weight: 900;
 }
 .tl-content p {
     font-family: customFont;
+    font-weight: bold;
 }
 .tl-content a {
     color: #1779cf;

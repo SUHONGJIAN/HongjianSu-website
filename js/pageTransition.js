@@ -35,7 +35,9 @@ $('.homeLink').click(function() {
   $('.homeLink').addClass('lightButton');
   setTimeout(function() {
     $('#homePage_SU').css('z-index','9');
-    window.tl.paused(true);
+    if (window.initDone) {
+      window.tl.paused(true);
+    }
     pJSDom[0].pJS.particles.move.enable = true;
     pJSDom[0].pJS.fn.particlesRefresh();
   }, 1000);
@@ -46,7 +48,9 @@ $('.experiencesLink').click(function() {
   $('.experiencesLink').addClass('lightButton');
   setTimeout(function() {
     $('#experiencesPage_SU').css('z-index','9');
-    tl.paused(true);
+    if (window.initDone) {
+      window.tl.paused(true);
+    }
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1000);
   window.currentPageIndex = 1;
@@ -56,7 +60,9 @@ $('.achievementsLink').click(function() {
   $('.achievementsLink').addClass('lightButton');
   setTimeout(function() {
     $('#achievementsPage_SU').css('z-index','9');
-    window.tl.paused(true);
+    if (window.initDone) {
+      window.tl.paused(true);
+    }
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1000);
   window.currentPageIndex = 2;
@@ -66,7 +72,9 @@ $('.skillsLink').click(function() {
   $('.skillsLink').addClass('lightButton');
   setTimeout(function() {
     $('#skillsPage_SU').css('z-index','9');
-    tl.paused(true);
+    if (window.initDone) {
+      window.tl.paused(true);
+    }
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1000);
   window.currentPageIndex = 3;
@@ -76,7 +84,6 @@ $('.liferecordsLink').click(function() {
   $('.liferecordsLink').addClass('lightButton');
   setTimeout(function() {
     $('#liferecordsPage_SU').css('z-index','9');
-    window.tl.paused(false);
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1000);
   window.currentPageIndex = 4;
@@ -86,7 +93,9 @@ $('.contactLink').click(function() {
   $('.contactLink').addClass('lightButton');
   setTimeout(function() {
     $('#contactPage_SU').css('z-index','9');
-    window.tl.paused(true);
+    if (window.initDone) {
+      window.tl.paused(true);
+    }
     pJSDom[0].pJS.particles.move.enable = false;
   }, 1000);
   window.currentPageIndex = 5;
